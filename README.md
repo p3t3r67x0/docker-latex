@@ -41,7 +41,7 @@ sudo usermod -aG docker $(whoami)
 Compile latex sources using docker, run this command
 
 ```bash
-docker run --rm -i -v $PWD:/data opendatacoder/latex:latest pdflatex main.tex
+docker run --rm -i -v $PWD:/home/latex/data opendatacoder/latex:latest pdflatex main.tex
 ```
 
 **Daemon setup**
@@ -49,5 +49,5 @@ docker run --rm -i -v $PWD:/data opendatacoder/latex:latest pdflatex main.tex
 If you're working on source in latex, you might want to compile it multiple times and don't want to start a container each time.
 
 ```bash
-docker run -d --rm -i -t -v $PWD:/data opendatacoder/latex:latest /bin/bash -c "sleep forever"
+docker run -d --rm -i -t -v $PWD:/home/latex/data opendatacoder/latex:latest /bin/bash -c "sleep forever"
 ```
