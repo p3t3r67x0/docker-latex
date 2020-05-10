@@ -7,6 +7,7 @@
 
 > A Dockerfile for your LaTeX projects based on Ubuntu rolling releases
 
+![Docker logo](https://github.com/p3t3r67x0/docker-latex/raw/master/docs/docker.svg)
 
 This image helps compiling latex sources without the need to install all latex packages on your system.
 
