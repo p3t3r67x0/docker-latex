@@ -1,6 +1,7 @@
 FROM ubuntu:rolling
 
 ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive
 
 ARG USER_NAME=latex
 ARG USER_HOME=/home/latex
@@ -19,5 +20,5 @@ RUN apt upgrade
 RUN apt install -y texlive-full pandoc pandoc-citeproc fig2dev make wget git
 RUN apt-get clean -y
 
-WORKDIR /data
-VOLUME ["/data"]
+WORKDIR /home/latex
+VOLUME ["/home/latex/data"]
